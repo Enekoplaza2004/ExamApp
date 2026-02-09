@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Full Stack (HTML + JS + PHP + MySQL)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Listado de items</h1>
+      <p class="muted">Cargado desde MySQL vía PHP (mysqli) en JSON.</p>
+    </header>
+
+    <section class="card">
+      <form id="addForm" class="row">
+        <input id="nameInput" type="text" placeholder="Nuevo item..." maxlength="120" required />
+        <button type="submit">Añadir</button>
+      </form>
+
+      <div class="row space-between">
+        <div id="status" class="muted">Listo.</div>
+        <button id="reloadBtn" type="button" class="secondary">Recargar</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:90px;">ID</th>
+              <th>Nombre</th>
+              <th style="width:220px;">Creado</th>
+              <th style="width:120px;">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="4" class="muted">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

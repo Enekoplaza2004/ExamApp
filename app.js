@@ -1,5 +1,5 @@
 // app.js
-const API_URL = 'http://localhost:8000/api.php';
+const API_URL = 'http://localhost:8080/api.php';
 
 const tbody = document.getElementById('tbody');
 const statusEl = document.getElementById('status');
